@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class DashboardController extends Controller
+class MenuController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -15,10 +14,6 @@ class DashboardController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $user = Auth::user();
-
-        $pizzas = ['Capricciosa', 'Fruktpizza', 'Bananpizza'];
-
-        return view('dashboard', ['user' => $user, 'pizzas' => $pizzas]);
+        //
     }
 }
