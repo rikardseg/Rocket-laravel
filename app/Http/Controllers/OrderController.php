@@ -17,14 +17,15 @@ class OrderController extends Controller
     public function __invoke(Request $request)
     {
         $this->validate($request, [
-            'pizza' => 'required|string|min:10'
+            'pizza' => 'string|min:10'
         ]);
 
-        $orders = new Orders();
-        $orders->pizza = $request->input('pizza');
-        $orders->user_id = Auth::id();
-        $orders->save();
+        $order = new Orders();
+        $order->pizza = $request->input('pizza');
+        $order->id = Auth::id();
+        $order->save();
 
         return back();
+        // return redirect('/orders')->with('success', 'Order Created');
     }
 }
