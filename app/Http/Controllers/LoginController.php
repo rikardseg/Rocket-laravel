@@ -18,7 +18,7 @@ class LoginController extends Controller
         $credentials = $request->only(['email', 'password']);
 
         if (Auth::attempt($credentials)) {
-            return redirect('order');
+            return redirect('orders');
         }
 
         return back()->withErrors("Whoopssieedaisy, no pizza for you");

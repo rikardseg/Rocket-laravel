@@ -32,11 +32,17 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'pizza' => 'string'
+            'pizza' => 'string',
+            'full_name' => 'string',
+            'email' => 'string',
+            'address' => 'string'
         ]);
 
         $order = new Order();
         $order->pizza = $request->input('pizza');
+        $order->full_name = $request->input('full_name');
+        $order->email = $request->input('email');
+        $order->address = $request->input('address');
         $order->user_id = Auth::id();
         $order->save();
 
@@ -50,7 +56,7 @@ class OrderController extends Controller
 
         $pizzas = ['Capricciosa', 'Fruktpizza', 'Bananpizza'];
 
-        return view('order', ['user' => $user, 'pizzas' => $pizzas]);
+        return view('orders', ['user' => $user, 'pizzas' => $pizzas]);
     }
 
     public function show($id)
