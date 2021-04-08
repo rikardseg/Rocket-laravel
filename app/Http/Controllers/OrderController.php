@@ -33,20 +33,23 @@ class OrderController extends Controller
     {
         $this->validate($request, [
             'pizza' => 'string',
-            'full_name' => 'string',
-            'email' => 'string',
+            // 'full_name' => 'string',
             'address' => 'string'
         ]);
 
         $order = new Order();
         $order->pizza = $request->input('pizza');
         $order->full_name = $request->input('full_name');
-        $order->email = $request->input('email');
         $order->address = $request->input('address');
         $order->user_id = Auth::id();
         $order->save();
 
-        return redirect('/orders')->with('success', 'Order Created');
+        $orders = Order::where('user_id', Auth::user()->id)
+            ->take(10)
+            ->get();
+        return view('user.history', [
+            'orders' => $orders
+        ]);
     }
 
     public function index()

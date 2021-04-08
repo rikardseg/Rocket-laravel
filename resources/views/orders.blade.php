@@ -1,13 +1,18 @@
-Hello :) :)
-
-Hello, {{ $user->name }}! <a href="logout">Do you want to logout?</a>
-
 @include('errors')
+@extends('layouts.mainlayout')
 
-{{-- @foreach ($pizzas as $pizza)
-<h2>{{$pizza}}</h2>
-@endforeach --}}
-<form action="/orders" method="post">
+@section('content')
+    <div class="album text-muted">
+      <div class="container">
+
+
+        <div class="row">
+            <div class="col-12">
+          <h1>Beställ fruktpizza!</h1>
+		<!--  <p>hej o hå </p> -->
+          </div>
+          <div class="col-12">
+		<form action="/orders" method="post">
     @csrf
 
     <label for="pizza">Pizza</label>
@@ -17,11 +22,25 @@ Hello, {{ $user->name }}! <a href="logout">Do you want to logout?</a>
         <option value="{{$pizza}}">{{$pizza}}</option>
         @endforeach
     </select>
-    <label for="full_name">Full Name</label>
-    <input type="text" id="full_name" name="full_name">
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email">
+
+    <label for="full_name" >Full Name</label>
+    <input type="text" class="form-control" id="full_name" name="full_name">
     <label for="">Address</label>
-    <input type="text" id="address" name="address">
-    <button type="submit">Create Order</button>
+    <input type="text" class="form-control" id="address" name="address">
+    <button type="submit" class="btn btn-primary">Create Order</button>
 </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+@endsection
+
+
+
+
+
+{{-- @foreach ($pizzas as $pizza)
+<h2>{{$pizza}}</h2>
+@endforeach --}}
+

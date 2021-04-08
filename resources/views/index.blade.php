@@ -1,4 +1,5 @@
 @include('errors')
+
 <form method="post" action="/login">
     @csrf
     <div>

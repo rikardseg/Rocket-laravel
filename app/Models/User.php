@@ -43,6 +43,6 @@ class User extends Authenticatable
 
     public function orders()
     {
-        return $this->hasMany(Order::class, 'foreign_key', 'id');
+        return $this->hasMany(Order::class);
     }
 }
