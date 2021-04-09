@@ -59,7 +59,7 @@ class OrderController extends Controller
 
         $pizzas = ['Capricciosa', 'Fruktpizza', 'Bananpizza'];
 
-        return view('register', ['user' => $user, 'pizzas' => $pizzas]);
+        return view('orders', ['user' => $user, 'pizzas' => $pizzas]);
     }
 
     public function show($id)

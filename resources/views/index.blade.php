@@ -19,7 +19,7 @@
     <button type="submit">Login</button>
 </form>
 
-<a class="nav-link" href="{{ route('views.register') }}">{{ __('New to fruit pizza? Register an account to order!') }}</a>
+<a class="nav-link" href="{{ route('register') }}">{{ __('New to fruit pizza? Register an account to order!') }}</a>
 
 
 @endsection
