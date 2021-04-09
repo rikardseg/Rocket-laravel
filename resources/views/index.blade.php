@@ -1,5 +1,11 @@
 @include('errors')
 
+@extends('layouts.mainlayout')
+
+@section('content')
+
+<div class="container">
+
 <form method="post" action="/login">
     @csrf
     <div>
@@ -12,3 +18,8 @@
     </div>
     <button type="submit">Login</button>
 </form>
+
+<a class="nav-link" href="{{ route('views.register') }}">{{ __('New to fruit pizza? Register an account to order!') }}</a>
+
+
+@endsection

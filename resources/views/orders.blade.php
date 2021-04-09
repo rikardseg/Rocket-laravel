@@ -8,7 +8,7 @@
 
         <div class="row">
             <div class="col-12">
-          <h1>Beställ fruktpizza!</h1>
+          <h1>Order fruit pizza!</h1>
 		<!--  <p>hej o hå </p> -->
           </div>
           <div class="col-12">

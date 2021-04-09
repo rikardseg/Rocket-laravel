@@ -5,18 +5,18 @@
 <div class="container">
 <div class="row">
 <div class="col-12">
-<div class="card" style="width: 18rem;">
-  <img src="#" class="card-img-top" alt="...">
+<div class="card mx-auto" style="width: 18rem;">
+  <img src="https://sparkpeo.hs.llnwd.net/e1/resize/630m620/e2/guid/Fruit-Pizza-/824e0313-21dd-4a0c-ba52-e7c88b8cff25.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Hello, {{ $user->name }}!</h5>
-    <p class="card-text">Vill du ha fruktpizza?</p>
-    <a href="{{ route('orders.index') }}" class="btn btn-primary">Ja!</a>
+    <p class="card-text">Do you want fruit? Do your want pizza? Do you want fruit on a pizza?</p>
+    <a href="{{ route('orders.index') }}" class="btn btn-primary">Yes!</a>
   </div>
 </div>
 </div>
 </div>
 
 
-  <a class="nav-link" href="{{ route('orders.index') }}">{{ __('Boka pizza!') }}</a>
+  <a class="nav-link" href="{{ route('orders.index') }}">{{ __('Order fruit pizza!') }}</a>
 
 @endsection
