@@ -41,9 +41,9 @@
               </div>
           </li>
       @endguest
-      <li class="nav-item">
+    {{--   <li class="nav-item">
         <a class="nav-link" href="#">Pizzaaa</a>
-      </li>
+      </li> --}}
    {{--    <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
       </li> --}}
