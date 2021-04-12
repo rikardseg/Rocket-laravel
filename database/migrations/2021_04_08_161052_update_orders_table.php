@@ -11,16 +11,16 @@ class UpdateOrdersTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::table(
-            'orders',
-            function (Blueprint $table) {
-                $table->string('full_name');
-                $table->string('address');
-            }
-        );
-    }
+    // public function up()
+    // {
+    //     Schema::table(
+    //         'orders',
+    //         function (Blueprint $table) {
+    //             $table->string('full_name');
+    //             $table->string('address');
+    //         }
+    //     );
+    // }
 
     /**
      * Reverse the migrations.

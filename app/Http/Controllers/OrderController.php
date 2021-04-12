@@ -33,7 +33,7 @@ class OrderController extends Controller
     {
         $this->validate($request, [
             'pizza' => 'string',
-            // 'full_name' => 'string',
+            'full_name' => 'string',
             'address' => 'string'
         ]);
 
