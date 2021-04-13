@@ -1,11 +1,7 @@
 php:
   risky: true
-  version: 7
+  version: 8
   preset: laravel
-  enabled:
-    - ternary_to_elvis_operator
-  disabled:
-    - single_import_per_statement
   finder:
     exclude:
       - "modules"
@@ -15,4 +11,3 @@ php:
     name: ".php"
     not-name:
       - ".blade.php"
-      - "_ide_helper.php"
