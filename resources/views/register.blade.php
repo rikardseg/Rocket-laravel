@@ -7,19 +7,19 @@
 
 <form method="post" action="/register">
     @csrf
-    <div>
+    <div class="form-group">
         <label for="name">Name</label>
-        <input name="name" id="name" type="name" />
+        <input placeholder="John Johnson" class="form-control" name="name" id="name" type="name" />
     </div>
-    <div>
+    <div class="form-group">
         <label for="email">Email</label>
-        <input name="email" id="email" type="email" />
+        <input class="form-control" name="email" id="email" type="email" />
     </div>
-    <div>
+    <div class="form-group">
         <label for="password">Password</label>
-        <input name="password" id="password" type="password" />
+        <input class="form-control" name="password" id="password" type="password" />
     </div>
-    <button type="submit">Register</button>
+    <button class="btn btn-success" type="submit">Register</button>
 </form>
 </div>
 </div>

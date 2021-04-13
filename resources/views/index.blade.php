@@ -6,15 +6,15 @@
 
 <form method="post" action="/login">
     @csrf
-    <div>
+    <div class="form-group">
         <label for="email">Email</label>
-        <input name="email" id="email" type="email" />
+        <input class="form-control" name="email" id="email" type="email" />
     </div>
-    <div>
+    <div class="form-group">
         <label for="password">Password</label>
-        <input name="password" id="password" type="password" />
+        <input class="form-control" name="password" id="password" type="password" />
     </div>
-    <button type="submit">Login</button>
+    <button class="btn btn-success" type="submit">Login</button>
 </form>
 
 <a class="nav-link" href="/register">{{ __('New to fruit pizza? Register an account to order!') }}</a>
