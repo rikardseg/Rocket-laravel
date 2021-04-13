@@ -16,8 +16,3 @@ php:
     not-name:
       - ".blade.php"
       - "_ide_helper.php"
-js:
-  finder:
-    not-name:
-      - webpack.mix.js
-css: true
