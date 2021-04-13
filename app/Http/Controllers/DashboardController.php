@@ -17,19 +17,19 @@ class DashboardController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $user = Auth::user();
+        /* $user = Auth::user(); */
 
         // User::$user->orders()->get();
 
-        $orders = Order::find($user);
+        /* $orders = Order::find($user);  */
 
-        $users = User::find(1);
+        /*  $users = User::find(1);  */ // ??????????????????????
 
-        foreach ($orders as $order) {
-        }
+        /*    foreach ($orders as $order) {
+        } */
 
-        $pizzas = ['Capricciosa', 'Fruktpizza', 'Bananpizza'];
+        /*  $pizzas = ['Capricciosa', 'Fruktpizza', 'Bananpizza'];  */ //????????????????????????
 
-        return view('dashboard', ['user' => $user, 'pizzas' => $pizzas]);
+        return view('dashboard');
     }
 }

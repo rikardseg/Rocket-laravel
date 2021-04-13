@@ -1,3 +1,10 @@
+@extends('layouts.mainlayout')
+
+@section('content')
+
+<div class="container">
+
+
 <form method="post" action="/register">
     @csrf
     <div>
@@ -14,3 +21,7 @@
     </div>
     <button type="submit">Register</button>
 </form>
+</div>
+</div>
+@include('errors')
+@endsection

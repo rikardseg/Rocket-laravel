@@ -14,7 +14,7 @@ class OrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
+    /*    public function __invoke(Request $request)
     {
         $this->validate($request, [
             'pizza' => 'string'
@@ -26,8 +26,7 @@ class OrderController extends Controller
         $order->save();
 
         return back();
-        // return redirect('/orders')->with('success', 'Order Created');
-    }
+    } */
 
     public function store(Request $request)
     {
@@ -44,28 +43,32 @@ class OrderController extends Controller
         $order->user_id = Auth::id();
         $order->save();
 
-        $orders = Order::where('user_id', Auth::user()->id)
+        return redirect()->back()->with('success', 'Fruit Pizza is on the way!');
+
+        /*       $orders = Order::where('user_id', Auth::user()->id)
             ->take(10)
             ->get();
-        return view('user.history', [
-            'orders' => $orders
-        ]);
+        return view('orders.success'); */
     }
 
-    public function index()
+    public function create()
     {
         $user = Auth::user();
         // $orders = Orders::all();
 
-        $pizzas = ['Capricciosa', 'Fruktpizza', 'Bananpizza'];
+        $pizzas = ['Hawaii', 'Fruktpizza', 'Bananpizza', 'Capricciosa med ananas'];
 
         return view('orders', ['user' => $user, 'pizzas' => $pizzas]);
     }
 
-    public function show($id)
+    public function index()
     {
+        $orders = Order::where('user_id', Auth::user()->id)
+            ->take(5)
+            ->orderBy('id', 'desc')
+            ->get();
         return view('orders.history', [
-            'orders' => Order::findOrFail($id)
+            'orders' => $orders
         ]);
     }
 }

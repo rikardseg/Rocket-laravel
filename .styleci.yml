@@ -1,11 +1,21 @@
 php:
+  risky: true
+  version: 7
   preset: laravel
+  enabled:
+    - ternary_to_elvis_operator
   disabled:
-    - no_unused_imports
+    - single_import_per_statement
   finder:
+    exclude:
+      - "modules"
+      - "node_modules"
+      - "storage"
+      - "vendor"
+    name: ".php"
     not-name:
-      - index.php
-      - server.php
+      - ".blade.php"
+      - "_ide_helper.php"
 js:
   finder:
     not-name:

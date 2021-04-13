@@ -18,19 +18,20 @@ class UserController extends Controller
 
     public function show($id)
     {
-        dd(User::all());
+
         return view('user.history', [
             'orders' => Order::findOrFail(Auth::user()->id)
         ]);
     }
 
-    public function index()
+    /*     public function index()
     {
+
         $orders = Order::where('user_id', Auth::user()->id)
             ->take(10)
             ->get();
         return view('user.history', [
             'orders' => $orders
         ]);
-    }
+    } */
 }

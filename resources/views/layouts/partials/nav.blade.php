@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand" href="#">{{ config('RocketPizza', 'RocketPizza') }}</a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,13 +23,22 @@
                 </li>
             @endif
         @else
+        <li class="nav-item">
+        <a class="nav-link" href="{{ route('orders.create') }}">{{ __('Make big juicy fruit order') }}</a>
+          </li>
+          <li class="nav-item">
+        <a class="nav-link" href="{{ route('orders.index') }}">{{ __('Your previous fruit') }}</a>
+          </li>
           <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                   {{ Auth::user()->name }}
               </a>
 
+
+
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/logout"
+
+                <a class="dropdown-item" href="/logout"
                       onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                       {{ __('Logout') }}
@@ -41,20 +50,7 @@
               </div>
           </li>
       @endguest
-    {{--   <li class="nav-item">
-        <a class="nav-link" href="#">Pizzaaa</a>
-      </li> --}}
-   {{--    <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li> --}}
-    {{--   <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li> --}}
+
     </ul>
   </div>
   </div>
