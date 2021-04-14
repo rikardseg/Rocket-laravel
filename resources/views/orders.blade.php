@@ -9,7 +9,6 @@
         <div class="row">
             <div class="col-12">
           <h1>Order fruit pizza!</h1>
-		<!--  <p>hej o hå </p> -->
           </div>
           <div class="col-12">
 		<form action="/orders" method="post">
@@ -37,7 +36,7 @@
         <ul>
             <li>{!! \Session::get('success') !!}</li>
         </ul>
-        <a class="nav-link" href="{{ route('orders.index') }}">{{ __('Your previous fruit') }}</a>
+        <a class="nav-link" href="{{ route('orders.index') }}">{{ __('View order') }}</a>
     </div>
 @endif
           </div>

@@ -21,6 +21,6 @@ class LoginController extends Controller
             return redirect('dashboard');
         }
 
-        return back()->withErrors("Whoopssieedaisy, no pizza for you");
+        return back()->withErrors("Whoopssieedaisy, no fruitpizza for you");
     }
 }

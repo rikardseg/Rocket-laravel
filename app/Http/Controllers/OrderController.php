@@ -14,19 +14,6 @@ class OrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    /*    public function __invoke(Request $request)
-    {
-        $this->validate($request, [
-            'pizza' => 'string'
-        ]);
-
-        $order = new Order();
-        $order->pizza = $request->input('pizza');
-        $order->user_id = Auth::id();
-        $order->save();
-
-        return back();
-    } */
 
     public function store(Request $request)
     {
@@ -42,17 +29,11 @@ class OrderController extends Controller
         $order->save();
 
         return redirect()->back()->with('success', 'Fruit Pizza is on the way!');
-
-        /*       $orders = Order::where('user_id', Auth::user()->id)
-            ->take(10)
-            ->get();
-        return view('orders.success'); */
     }
 
     public function create()
     {
         $user = Auth::user();
-        // $orders = Orders::all();
 
         $pizzas = ['Hawaii', 'Fruktpizza', 'Bananpizza', 'Capricciosa med ananas'];
 

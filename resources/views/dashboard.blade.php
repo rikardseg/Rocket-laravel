@@ -16,7 +16,4 @@
 </div>
 </div>
 
-
-  {{-- <a class="nav-link" href="{{ route('orders.index') }}">{{ __('Order fruit pizza!') }}</a> --}}
-
 @endsection

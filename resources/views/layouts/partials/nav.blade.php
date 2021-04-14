@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">{{ config('RocketPizza', 'RocketPizza') }}</a>
+    <a class="navbar-brand" href="/">{{ config('RocketPizza', 'RocketPizza') }}</a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,7 +8,7 @@
   <div class="navbar-collapse collapse" id="navbarsExample01" style="">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
           @guest
             @if (Route::has('login'))
@@ -24,10 +24,10 @@
             @endif
         @else
         <li class="nav-item">
-        <a class="nav-link" href="{{ route('orders.create') }}">{{ __('Make big juicy fruit order') }}</a>
+        <a class="nav-link" href="{{ route('orders.create') }}">{{ __('Create order') }}</a>
           </li>
           <li class="nav-item">
-        <a class="nav-link" href="{{ route('orders.index') }}">{{ __('Your previous fruit') }}</a>
+        <a class="nav-link" href="{{ route('orders.index') }}">{{ __('Previous order') }}</a>
           </li>
           <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
