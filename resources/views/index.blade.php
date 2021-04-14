@@ -8,11 +8,11 @@
     @csrf
     <div class="form-group">
         <label for="email">Email</label>
-        <input class="form-control" name="email" id="email" type="email" />
+        <input class="form-control" name="email" id="email" type="email" placeholder="frufruktpizza@email.se" />
     </div>
     <div class="form-group">
         <label for="password">Password</label>
-        <input class="form-control" name="password" id="password" type="password" />
+        <input class="form-control" name="password" id="password" type="password" placeholder="***"/>
     </div>
     <button class="btn btn-success" type="submit">Login</button>
 </form>
