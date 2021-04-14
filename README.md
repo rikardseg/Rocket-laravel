@@ -2,7 +2,7 @@
 
 ## RocketPizza
 
-Welcome to RocketPizza! Order tasty fruitpizza have it at your door in the near future!
+Welcome to RocketPizza! Order tasty fruitpizza have it at your door in the near future! Built with Laravel.
 
 ## Installation
 
