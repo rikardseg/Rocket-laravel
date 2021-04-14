@@ -25,7 +25,7 @@ Route::post('login', LoginController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::post('logout', LogoutController::class);
 Route::resource('orders', OrderController::class)->middleware('auth');
-Route::view('/register', 'register');
-Route::post('register', RegisterController::class);
+Route::view('/register', 'register')->middleware('guest');
+Route::post('register', RegisterController::class)->middleware('guest');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
