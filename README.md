@@ -1,4 +1,4 @@
-![](https://giphy.com/gifs/papajohns-pizza-school-papa-johns-3o7TKJG8p39T1hJFLO)
+![](https://media.giphy.com/media/3o7TKJG8p39T1hJFLO/giphy.gif)
 
 ## RocketPizza
 
