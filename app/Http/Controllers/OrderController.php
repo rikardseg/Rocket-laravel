@@ -28,7 +28,7 @@ class OrderController extends Controller
         $order->user_id = Auth::id();
         $order->save();
 
-        return redirect()->back()->with('success', 'Fruit Pizza is on the way!');
+        return redirect()->back()->with('success', 'Pizza is on the way!');
     }
 
     public function create()

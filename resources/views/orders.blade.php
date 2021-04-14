@@ -1,4 +1,3 @@
-@include('errors')
 @extends('layouts.mainlayout')
 
 @section('content')
@@ -31,6 +30,8 @@
 
 </form>
 
+@include('errors')
+
 @if (\Session::has('success'))
     <div class="alert alert-success">
         <ul>
@@ -45,12 +46,4 @@
       </div>
     </div>
 @endsection
-
-
-
-
-
-{{-- @foreach ($pizzas as $pizza)
-<h2>{{$pizza}}</h2>
-@endforeach --}}
 
