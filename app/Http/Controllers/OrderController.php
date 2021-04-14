@@ -32,13 +32,11 @@ class OrderController extends Controller
     {
         $this->validate($request, [
             'pizza' => 'string',
-            'full_name' => 'string',
             'address' => 'string'
         ]);
 
         $order = new Order();
         $order->pizza = $request->input('pizza');
-        $order->full_name = $request->input('full_name');
         $order->address = $request->input('address');
         $order->user_id = Auth::id();
         $order->save();

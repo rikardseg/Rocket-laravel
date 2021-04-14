@@ -15,7 +15,7 @@
 		<form action="/orders" method="post">
     @csrf
 
-    <div class="form-group">
+<div class="form-group">
     <label for="pizza">Pizza</label>
     <select class="form-control" name="pizza" id="pizza">
         <option selected>Pick Type</option>
@@ -23,12 +23,8 @@
         <option value="{{$pizza}}">{{$pizza}}</option>
         @endforeach
     </select>
-    </div>
-<div class="form-group">
-    <label for="full_name" >Full Name</label>
-    <input type="text" class="form-control" id="full_name" name="full_name">
 </div>
-    <div class="form-group">
+<div class="form-group">
     <label for="address">Address</label>
     <input type="text" class="form-control" id="address" name="address">
 </div>

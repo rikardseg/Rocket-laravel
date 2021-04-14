@@ -29,18 +29,18 @@ class LoginTest extends TestCase
     {
         $user = new User();
         $user->name = 'Testpizza';
-        $user->email = 'hej2@yrgo.se';
+        $user->email = 'frufruktpizza@yrgo.se';
         $user->password = Hash::make('123');
         $user->save();
 
         $response = $this
             ->followingRedirects()
             ->post('login', [
-                'email' => 'hej2@yrgo.se',
+                'email' => 'frufruktpizza@yrgo.se',
                 'password' => '123',
             ]);
 
-        $response->assertSeeText('Order');
+        $response->assertSeeText('Yes');
     }
 
     public function test_login_user_without_password()
@@ -48,7 +48,7 @@ class LoginTest extends TestCase
         $response = $this
             ->followingRedirects()
             ->post('login', [
-                'email' => 'example@yrgo.se',
+                'email' => 'frufruktpizza@yrgo.se',
             ]);
 
         $response->assertSeeText('Whoopssieedaisy, no pizza for you');

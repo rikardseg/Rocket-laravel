@@ -24,7 +24,7 @@ Route::view('/', 'index')->name('login')->middleware('guest');
 Route::post('login', LoginController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::post('logout', LogoutController::class);
-Route::resource('orders', OrderController::class);
+Route::resource('orders', OrderController::class)->middleware('auth');
 Route::view('/register', 'register');
 Route::post('register', RegisterController::class);
 
