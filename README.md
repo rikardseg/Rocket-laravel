@@ -2,7 +2,7 @@
 
 ## RocketPizza
 
-Welcome to RocketPizza! Order tasty fruitpizza have it at your door in the near future!
+Welcome to RocketPizza! Order tasty fruitpizza have it at your door in the near future! Built with Laravel.
 
 ## Installation
 
@@ -23,5 +23,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Creators
 
-Rikard
-Linn
+- Rikard
+- Linn

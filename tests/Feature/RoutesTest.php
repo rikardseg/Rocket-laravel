@@ -31,7 +31,6 @@ class RoutesTest extends TestCase
 
     public function test_dashboard_route()
     {
-
         $dashboard = '/dashboard';
 
         $user = new User();
