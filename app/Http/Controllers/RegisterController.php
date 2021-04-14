@@ -18,14 +18,10 @@ class RegisterController extends Controller
     public function __invoke(Request $request)
     {
         $this->validate($request, [
-            'name' =>  'required|string|min:3',
+            'name' =>  'required|string',
             'email' => 'required|string|unique:users,email',
             'password' => 'required|string|min:5'
         ]);
-
-        // 'username' => 'required|alpha_num|unique:users,username|min:4',
-        //     'email' => 'required|email|unique:users,email',
-        //     'password' => 'required|min:6|confirmed'
 
         $user = new User();
         $user->name = $request->input('name');
