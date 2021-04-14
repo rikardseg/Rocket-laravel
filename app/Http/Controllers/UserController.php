@@ -16,13 +16,13 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function show($id)
-    {
+    // public function show($id)
+    // {
 
-        return view('user.history', [
-            'orders' => Order::findOrFail(Auth::user()->id)
-        ]);
-    }
+    //     return view('user.history', [
+    //         'orders' => Order::findOrFail(Auth::user()->id)
+    //     ]);
+    // }
 
     /*     public function index()
     {

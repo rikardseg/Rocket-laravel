@@ -1,15 +1,11 @@
 php:
   risky: true
   version: 8
-  preset: laravel
+  preset: psr-12
   tab-width: 4
   use-tabs: false
   finder:
-    exclude:
-      - "modules"
-      - "node_modules"
-      - "storage"
-      - "vendor"
-    name: ".php"
+    name:
+    - "*.php"
     not-name:
       - ".blade.php"
